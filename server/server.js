@@ -7,6 +7,11 @@ const express = require('express');
 // Using Node.js `require()`
 const mongoose = require('mongoose');
 
+
+// PRUEBA MERCADO LIBRE
+const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
+
+
 const path = require('path');
 
 const app = express();
@@ -34,9 +39,6 @@ app.listen(process.env.PORT, () => {
     console.log('Escuchando en el puerto: ', 3000);
 });
 
-// PRUEBA MERCADO LIBRE
-
-var MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
 
 passport.use(new MercadoLibreStrategy({
     clientID: process.env.MERCADO_CLIENT,
