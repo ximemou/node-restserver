@@ -1,15 +1,28 @@
 require('./config/config');
 
 
-//MELI.init({ client_id: process.env.MERCADO_CLIENT});
+MELI.init({ client_id: process.env.MERCADO_CLIENT,
+    xauth_protocol: "https://",
+    xauth_domain: "secure.mlstatic.com",
+    xd_url: "/org-img/sdk/xd-1.0.4.html"});
 
+
+MELI.login(function() {
+    MELI.get("/users/me", {}, function(data) {
+      alert("Hello " + data[2].first_name);
+    });
+  });
+
+  MELI.login(function() {
+    // Your code here
+  });
 const express = require('express');
 // Using Node.js `require()`
 const mongoose = require('mongoose');
 
 
 // PRUEBA MERCADO LIBRE
-const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
+/* const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
 
 
 const path = require('path');
@@ -88,4 +101,4 @@ function ensureAuthenticated(req, res, next) {
     return next();
   };
   res.redirect('/auth/mercadolibre');
-};
+}; */

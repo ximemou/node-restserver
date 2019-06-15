@@ -14,9 +14,6 @@ process.env.CADUCIDAD_TOKEN = 60*60*24*30;
 //mercado libre
 
 
-
-
-
 //Seed de autenticacion
 
 process.env.SEED =process.env.SEED ||'este-es-el-seed-desarrollo';
