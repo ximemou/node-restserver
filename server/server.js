@@ -15,6 +15,10 @@ const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
 const path = require('path');
 
 const app = express();
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 const bodyParser = require('body-parser');
 
 // parse application/x-www-form-urlencoded
