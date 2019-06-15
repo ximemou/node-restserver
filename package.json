@@ -17,6 +17,7 @@
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.5.9",
         "mongoose-unique-validator": "^2.0.3",
+        "passport-mercadolibre": "0.0.2",
         "underscore": "^1.9.1"
     }
 }
