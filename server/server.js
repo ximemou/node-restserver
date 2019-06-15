@@ -1,7 +1,7 @@
 require('./config/config');
 
 
-MELI.init({ client_id: process.env.MERCADO_CLIENT});
+//MELI.init({ client_id: process.env.MERCADO_CLIENT});
 
 const express = require('express');
 // Using Node.js `require()`
