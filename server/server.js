@@ -1,46 +1,13 @@
 require('./config/config');
 
 
-MELI.init({ client_id: process.env.MERCADO_CLIENT,
-    xauth_protocol: "https://",
-    xauth_domain: "secure.mlstatic.com",
-    xd_url: "/org-img/sdk/xd-1.0.4.html"});
-
-
-MELI.login(function() {
-    MELI.get("/users/me", {}, function(data) {
-      alert("Hello " + data[2].first_name);
-    });
-  });
-
-  MELI.login(function() {
-    // Your code here
-  });
 const express = require('express');
 // Using Node.js `require()`
 const mongoose = require('mongoose');
 
-
-// PRUEBA MERCADO LIBRE
-/* const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
-
-
 const path = require('path');
 
 const app = express();
-
-const passport = require('passport');
-
-app.use(passport.initialize());
-app.use(passport.session());
-
-const bodyParser = require('body-parser');
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
-app.use(bodyParser.json());
 
 
 app.use(express.static(path.resolve(__dirname,'../public')));
@@ -57,6 +24,27 @@ mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: tru
 app.listen(process.env.PORT, () => {
     console.log('Escuchando en el puerto: ', 3000);
 });
+
+
+const bodyParser = require('body-parser');
+
+// PRUEBA MERCADO LIBRE
+/* const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
+
+const passport = require('passport');
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
+
+
 
 
 passport.use(new MercadoLibreStrategy({
