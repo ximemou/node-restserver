@@ -78,6 +78,7 @@ app.get('/auth/mercadolibre/callback',
 
 app.get('/', ensureAuthenticated,
   function(req, res) {
+      console.log("Logged in user: " + req.user.nickname);
     res.send("Logged in user: " + req.user.nickname);
   }
 );
