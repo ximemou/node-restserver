@@ -28,6 +28,19 @@ app.listen(process.env.PORT, () => {
 
 const bodyParser = require('body-parser');
 
+
+MELI.init({
+    client_id: process.env.MERCADO_CLIENT,
+    xauth_protocol: "https://",
+    xauth_domain: "secure.mlstatic.com",
+    xd_url: "/org-img/sdk/xd-1.0.4.html"
+  });
+
+  MELI.login(function() {
+    // Your code here
+  });
+
+
 // PRUEBA MERCADO LIBRE
 /* const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
 
