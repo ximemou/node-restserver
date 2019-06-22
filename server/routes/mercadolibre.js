@@ -17,13 +17,15 @@ MELI.init({
     xd_url: "/org-img/sdk/xd-1.0.4.html"
   });
 
-  MELI.login(function() {
-    console.log('usuario logueado');
-  });
+  // MELI.login(function() {
+  //   console.log('usuario logueado');
+  // });
 
 app.post('/loginMercadoLibre', (req,res) =>{
 
 
 });
+
+meliObject.getAuthURL(process.env.CALLLBACK_URL); 
 
 module.exports = app;
