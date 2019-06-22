@@ -31,7 +31,7 @@ const bodyParser = require('body-parser');
 
 
 // PRUEBA MERCADO LIBRE
-const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
+/* const MercadoLibreStrategy = require('passport-mercadolibre').Strategy;
 
 const passport = require('passport');
 
@@ -91,4 +91,4 @@ function ensureAuthenticated(req, res, next) {
     return next();
   };
   res.redirect('/auth/mercadolibre');
-};
+}; */
