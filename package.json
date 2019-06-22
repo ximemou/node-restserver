@@ -15,6 +15,7 @@
         "express": "^4.17.0",
         "google-auth-library": "^4.0.0",
         "jsonwebtoken": "^8.5.1",
+        "mercadolibre": "0.0.13",
         "mongoose": "^5.5.9",
         "mongoose-unique-validator": "^2.0.3",
         "passport": "^0.4.0",
