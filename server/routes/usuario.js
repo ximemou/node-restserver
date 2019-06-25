@@ -6,7 +6,7 @@ const Usuario = require('../models/usuario');
 const {verificaToken,verificaAdminRole} =require('../middlewares/autenticacion');
 
 const app = express();
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 
 app.get('/usuario',verificaToken ,function(req, res) {
 

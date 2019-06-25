@@ -24,7 +24,7 @@ let verificaToken =(req,res,next)=>{
 
 
   //Verifica ADMIN_ROLE
-  let verificaAdminRole = (re,res,next) => {
+  let verificaAdminRole = (req,res,next) => {
   
     let usuario = req.usuario;
     if(usuario.role === 'ADMIN_ROLE'){
