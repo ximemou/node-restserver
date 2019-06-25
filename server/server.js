@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname,'../public')));
 
-app.use(require('./routes/index'));
+app.use(require('./routes/index').default);
 
 
 mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: true }, (error, resp) => {
